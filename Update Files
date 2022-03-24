@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main(){
+    int t;
+    cin >> t;
+    while(t--){
+        long long n, k;
+        cin >> n >> k;
+        long long ans = 0;
+        long long t = 1;
+        while(t < k){
+            t *= 2;
+            ans++;
+        }
+        if(t < n) ans += (n-t+k-1)/k;
+        cout << ans << endl;
+    }
+    return 0;
+}
